@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SLJDealerProxy.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    SLJDealerProxy *dealerProxy = [SLJDealerProxy dealerProxy];
+    [dealerProxy purchaseBookWithTitle:@"Swift 100 Tips"];
+    [dealerProxy purchaseClothesWithSize:0];
+
     // Override point for customization after application launch.
     return YES;
 }
